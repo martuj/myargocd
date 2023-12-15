@@ -1,1 +1,14 @@
-123
+apiVersion: v1
+kind: Pod
+metadata:
+  name: arg-httpd-pod
+  labels:
+    env: prod 
+    type: front-end
+    app: httpd-ws
+spec:
+  containers:
+  - name: httpd-container
+    image: httpd
+    ports:
+       - containerPort: 80
